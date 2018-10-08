@@ -8,7 +8,7 @@ mongoose.connect('mongodb://BackendDatabase:Backend123@ds223253.mlab.com:23253/m
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var stutentsRouter = require('./routes/students');
 var app = express();
 
 app.use(logger('dev'));
