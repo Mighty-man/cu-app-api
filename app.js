@@ -21,6 +21,7 @@ app.use(bodyParser());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/api/v1/students', stutentsRouter);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
