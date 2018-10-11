@@ -4,6 +4,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var cors = require('cors');
 mongoose.connect('mongodb://BackendDatabase:Backend123@ds223253.mlab.com:23253/myproject');
 
 var indexRouter = require('./routes/index');
@@ -18,6 +19,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser());
+app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
