@@ -5,7 +5,7 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var cors = require('cors');
-var dotenv = require('dotenv');
+require('dotenv').config();
 mongoose.connect(process.env.DATABASE_URL);
 
 var indexRouter = require('./routes/index');

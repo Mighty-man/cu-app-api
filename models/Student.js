@@ -9,3 +9,6 @@ var studentSchema = new Schema({
  emailAddress: String,
  phoneNumber: Number
 });
+
+const Student = mongoose.model('student', studentSchema);
+module.exports = Student;
