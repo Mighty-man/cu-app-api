@@ -5,7 +5,8 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var cors = require('cors');
-mongoose.connect('mongodb://BackendDatabase:Backend123@ds223253.mlab.com:23253/myproject');
+var dotenv = require('dotenv');
+mongoose.connect(process.env.DATABASE_URL);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
