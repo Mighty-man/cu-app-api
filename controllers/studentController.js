@@ -7,9 +7,9 @@ module.exports = {
 
     },
     newStudent: async (req, res) => {
-        const newStudent = req.body;
-        const student = await Student.save(newStudent);
-        res.status(201).json(student)
+        const newStudent = new Student(req.body);
+         student = await newStudent.save();
+        res.status(201).json(student);
     },
 
  }

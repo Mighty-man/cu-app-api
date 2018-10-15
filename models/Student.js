@@ -6,7 +6,7 @@ var studentSchema = new Schema({
   middleName: String,
   lastName:   String,
  countyOfOrigin: String,
- emailAddress: String,
+ email: String,
  phoneNumber: Number
 });
 
