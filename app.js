@@ -11,6 +11,7 @@ mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true });
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var stutentsRouter = require('./routes/students');
+var bankReceiptRouter = require('./routes/bankReciept');
 var app = express();
 
 app.use(logger('dev'));
@@ -25,6 +26,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/v1/students', stutentsRouter);
+app.use('/api/v1/receipts', bankReceiptRouter);
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

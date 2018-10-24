@@ -11,5 +11,11 @@ module.exports = {
          student = await newStudent.save();
         res.status(201).json(student);
     },
+    getSingleStudent: async (req, res) => {
+        const studentId = req.params.studentId
+    
 
+        
+        await Student.findByIdAndUpdate({studentId, student})
+    }
  }

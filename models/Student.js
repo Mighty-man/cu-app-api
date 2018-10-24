@@ -7,8 +7,7 @@ var studentSchema = new Schema({
   lastName:   String,
  countyOfOrigin: String,
  email: String,
- phoneNumber: Number,
- reciept: String
+ phoneNumber: Number
 });
 
 const Student = mongoose.model('student', studentSchema);
